@@ -73,7 +73,6 @@ h2 {
 
 .search-input > input {
   font-size: 2.5rem;
-  /* width: 39.5rem; */
   font-size: 4rem;
   padding: 0.5rem;
   border: none;
@@ -110,26 +109,7 @@ h2 {
   
 }
 
-/* @media screen and (max-width:924px) {
-  
 
-  .details {
-    width: 35%;
-    display: flex;
-    justify-content: space-around;
-  }
-  .search-input {
-    height: 30%;
-    width: 35%;
-    margin-right: 4%;
-  }
-  
-  .search-input > input {
-    width: 70%;
-  }
-  
-
-} */
 
 @media screen and (max-width:730px) {
 
@@ -169,91 +149,3 @@ h2 {
 
 
 
-/* .feel-likes {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-} */
-
-/* .search-input {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  position: absolute;
-  right: 10rem;
-  top: 61rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(1px);
-  overflow: hidden;
-  padding: .2rem;
-}
-
-.search-input > input {
-  font-size: 2.5rem;
-  width: 39.5rem;
-  font-size: 4.0rem;
-  padding: .5rem;
-  border: none;
-  outline: none;
-  color: white;
-  background: transparent;
-}
-
-.search-input > input::placeholder {
-  color: white;
-}
-
-.search-button {
-  cursor: pointer;
-  transform: scale(1.2);
-  margin-right: 1.0rem;
-}
-
-.search-button:hover {
-  transform: scale(1.4);
-}
-
-.weather-container > h2 {
-  position: absolute;
-  font-size: 6.4rem;
-  left: 6.3rem;
-  top: 77.0rem;
-}
-
-.top-part {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  left: 6.3rem;
-  top: 47.3rem;
-}
-
-.top-part > h1 {
-  font-size: 18rem;
-}
-
-.condition-high-low {
-  margin-left: 2rem;
-}
-
-.condition-high-low > h1:nth-of-type(1) {
-  font-size: 6.4rem;
-}
-
-.condition-high-low > h1:nth-of-type(2),
-h1:nth-of-type(3) {
-  font-size: 3.6rem;
-} */
-
-/* .app {
-    height: 50vh;
-    width: 50vw;
-  }
-   */
