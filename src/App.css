@@ -3,6 +3,16 @@
 .container {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
 }
 
 .app {
@@ -17,7 +27,156 @@
   overflow: hidden;
 }
 
+.container .content {
+  position: relative;
+  left: 10%;
+  top: 30%;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 4rem;
+}
+
+.details {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.temp{
+  font-size: 7rem;
+}
 .search-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1px);
+  overflow: hidden;
+  padding: 0.2rem;
+  height: 40%;
+  margin-right: 4%;
+
+}
+
+.search-input > input {
+  font-size: 2.5rem;
+  /* width: 39.5rem; */
+  font-size: 4rem;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  color: white;
+  background: transparent;
+  width: 90%;
+}
+
+.search-input > input::placeholder {
+  color: white;
+}
+
+.country-name{
+  margin-bottom: 1%;
+}
+
+@media screen and (max-width:1024px) {
+
+  .details {
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .search-input {
+    height: 30%;
+    width: 35%;
+    margin-right: 4%;
+  }
+  
+  .search-input > input {
+    width: 80%;
+  }
+  
+}
+
+/* @media screen and (max-width:924px) {
+  
+
+  .details {
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .search-input {
+    height: 30%;
+    width: 35%;
+    margin-right: 4%;
+  }
+  
+  .search-input > input {
+    width: 70%;
+  }
+  
+
+} */
+
+@media screen and (max-width:730px) {
+
+  .info{
+    flex-direction: column;
+  }
+  .details {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .search-input {
+    height: 30%;
+    width: 80%;
+    margin-right: 4%;
+    
+
+  }
+  
+  .search-input > input {
+    width: 70%;
+  }
+  
+
+  .container .content {
+    top: 20%;
+  }
+
+  .country-name{
+    width: 80%;
+  }
+  
+  .info{
+    margin-bottom: 2.5rem;
+  }
+}
+
+
+
+/* .feel-likes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+} */
+
+/* .search-input {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,4 +250,10 @@
 .condition-high-low > h1:nth-of-type(2),
 h1:nth-of-type(3) {
   font-size: 3.6rem;
-}
+} */
+
+/* .app {
+    height: 50vh;
+    width: 50vw;
+  }
+   */

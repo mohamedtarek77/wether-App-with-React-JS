@@ -39,56 +39,87 @@ const App = () => {
   console.log(placeInfo);
 
   return (
-
     <div className="container">
-        <div
-      className="app"
-      style={
-        placeInfo.condition?.toLowerCase() === "clear" ||
-        placeInfo.condition?.toLowerCase() === "sunny"
-          ? { backgroundImage: `url(${Clear})` }
-          : placeInfo.condition?.includes("cloudy")
-          ? { backgroundImage: `url(${Cloudy})` }
-          : placeInfo.condition?.toLowerCase().includes("rainy")
-          ? { backgroundImage: `url(${Rainy})` }
-          : placeInfo.condition?.toLowerCase().includes("snow")
-          ? { backgroundImage: `url(${Snow})` }
-          : { backgroundImage: `url(${Overcast})` }
-      }
-    >
-      <div>
-        <div className="search-input">
-          <input
-            type="text"
-            value={place}
-            onChange={(e) => setplace(e.target.value)}
-          />
-          <SearchIcon
-            onClick={handlefetch}
-            fontSize="large"
-            className="search-button"
-          />
-        </div>
-      </div>
-      <div className="weather-container">
-        <div className="top-part">
-          <h1>{placeInfo.farenheit?.current} ° C</h1>
-          <div className="condition-high-low">
-            <h1>{placeInfo.condition}</h1>
-            <h1>{placeInfo.farenheit?.high} ° C</h1>
-            <h1>{placeInfo.farenheit?.low} ° C</h1>
+      <div
+        className="app"
+        style={
+          placeInfo.condition?.toLowerCase() === "clear" ||
+          placeInfo.condition?.toLowerCase() === "sunny"
+            ? { backgroundImage: `url(${Clear})` }
+            : placeInfo.condition?.includes("cloudy")
+            ? { backgroundImage: `url(${Cloudy})` }
+            : placeInfo.condition?.toLowerCase().includes("rainy")
+            ? { backgroundImage: `url(${Rainy})` }
+            : placeInfo.condition?.toLowerCase().includes("snow")
+            ? { backgroundImage: `url(${Snow})` }
+            : { backgroundImage: `url(${Overcast})` }
+        }
+      >
+   
+        <div className="content">
+          <div className="info">
+           
+              <div className="details">
+                <div className="temp">
+                  <h1>{placeInfo.farenheit?.current} ° C</h1>
+                </div>
+                <div className="feel-likes">
+                  <h1>{placeInfo.condition}</h1>
+                  <h2>{placeInfo.farenheit?.high} ° C</h2>
+                  <h2>{placeInfo.farenheit?.low} ° C</h2>
+                </div>
+              </div>
+              <div className="search-input">
+                <input
+                  type="text"
+                  value={place}
+                  onChange={(e) => setplace(e.target.value)}
+                />
+                <SearchIcon
+                  onClick={handlefetch}
+                  fontSize="large"
+                  className="search-button"
+                />
+              </div>
+           
+          </div>
+          <div className="country-name">
+            <h2>
+              {placeInfo.name},{placeInfo.country}
+            </h2>
           </div>
         </div>
-        <h2>
-          {placeInfo.name},{placeInfo.country}
-        </h2>
+       
+        {/* <div>
+          <div className="search-input">
+            <input
+              type="text"
+              value={place}
+              onChange={(e) => setplace(e.target.value)}
+            />
+            <SearchIcon
+              onClick={handlefetch}
+              fontSize="large"
+              className="search-button"
+            />
+          </div>
+        </div>
+        <div className="weather-container">
+          <div className="top-part">
+            <h1>{placeInfo.farenheit?.current} ° C</h1>
+            <div className="condition-high-low">
+              <h1>{placeInfo.condition}</h1>
+              <h1>{placeInfo.farenheit?.high} ° C</h1>
+              <h1>{placeInfo.farenheit?.low} ° C</h1>
+            </div>
+          </div>
+          <h2>
+            {placeInfo.name},{placeInfo.country}
+          </h2>
+        </div> */}
       </div>
     </div>
-    </div>
-    
   );
 };
 
 export default App;
-
-
